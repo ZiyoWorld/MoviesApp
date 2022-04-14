@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0e1538;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0e1538;
+}
+.movies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+}   
+.card{
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    margin: 10px;
+    width: 250px;
+    height: 510px;
+}
+.card .card-info{
+    padding: 0.5rem 0.5rem;
+}
+.card-info p {
+    margin: 12px 0;
+    font-size: 16px;
+}
+.card-img img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.15s linear all;
+}
+.card:hover .card-img img{
+    transform: scale(1.1);
+}
+header{
+    height: 70vh;
+}
+.header_nav{
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+.brand-logo{
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+.header_nav ul{
+    display: flex;
+}
+.header_nav ul li {
+    list-style: none;
+    
+}
+.header_nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 0 25px;
+}
+.main-head{
+    height: 55vh;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.15s linear all;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://miro.medium.com/max/1200/1*84e0u_WcKGHL0LRWrjloHA.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.main-head img{
+    width: 80px;
+    transition: 0.15px linear all;
+}
+.main-head:hover img{
+    width: 100px;
+}
+.main-head:hover{
+    background-position: bottom;
+}
+footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: #fff;
+}
+
+.main-foot{
+    height: 55vh;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.15s linear all;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://wallpaperaccess.com/full/329583.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.main-foot img{
+    width: 80px;
+    transition: 0.15px linear all;
+}
+.main-foot:hover img{
+    width: 100px;
+}
+.main-foot:hover{
+    background-position: bottom;
+}
