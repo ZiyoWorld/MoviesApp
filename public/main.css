@@ -35,6 +35,7 @@ body{
 }
 .card-img img{
     width: 100%;
+    height: 350px;
     cursor: pointer;
     transition: 0.15s linear all;
 }
@@ -259,3 +260,92 @@ footer {
 }
 
 /**SearchBar */
+/* Search Categories  */
+.radio-toggles {
+    align-items: center;
+    background: #eee;
+    border: 1px solid lightgrey;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    margin: 5px auto;
+    max-width: 400px;
+    overflow: hidden;
+    padding: 4px;
+    position: relative;
+}
+
+label {
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    width: 33.33%;
+    z-index: 2;
+}
+
+.slide-item {
+    background: white;
+    border-radius: 9999px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    height: calc(100% - 8px);
+    left: calc(33.33% + 4px);
+    position: absolute;
+    width: calc(33.33% - 8px);
+    transition: left .2s;
+    z-index: 0;
+}
+
+input[type="radio"] {
+    left: -9999px;
+    position: absolute;
+    z-index: -1;
+}
+input[type="radio"]:nth-of-type(1):checked ~ .slide-item {
+    left: 4px;
+}
+input[type="radio"]:nth-of-type(3):checked ~ .slide-item {
+    left: calc(66.66% + 4px);
+}
+
+/** Search Categories  */
+
+/* page not found */
+/*======================
+    404 page
+=======================*/
+
+
+.page_404{ 
+    padding:40px 0; 
+    background:#fff; 
+    font-family: 'Arvo', 
+    serif;
+}
+
+.page_404  img{ width:100%;}
+
+.four_zero_four_bg{
+ 
+    background-image: url("https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif");
+    height: 400px;
+    background-position: center;
+ }
+ 
+ 
+ .four_zero_four_bg h1{
+ font-size:80px;
+ }
+ 
+  .four_zero_four_bg h3{
+			 font-size:80px;
+			 }
+			 
+  .link_404{			 
+	color: #fff!important;
+    padding: 10px 20px;
+    background: #39ac31;
+    margin: 20px 0;
+    display: inline-block;}
+	.contant_box_404{ margin-top:-50px;}
+
+/** page not found */

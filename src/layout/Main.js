@@ -8,13 +8,15 @@ class Main extends Component {
      }
 
      componentDidMount(){
-         fetch("http://www.omdbapi.com/?i=tt3896198&apikey=4c870ec6&s=gentlemen")
+         fetch("https://www.omdbapi.com/?i=tt3896198&apikey=4c870ec6&s=batman")
            .then((response) => response.json())
            .then( (data) => this.setState({movies: data.Search}))
      }
       
-     searchMovies = (movie) =>{
-        fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=4c870ec6&s=${movie}`)
+     searchMovies = (movie, type = "all") =>{
+        fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=4c870ec6&s=${movie}${
+            type !== "all" ? `$type=${type}` : " "}`
+            )
         .then((response) => response.json())
         .then( (data) => this.setState({movies: data.Search}))
      }
