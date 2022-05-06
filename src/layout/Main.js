@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
 import Movies from '../components/Movies';
+import SearchBar from '../components/SearchBar';
 
 class Main extends Component {
     state = {
         movies: []
     }
     componentDidMount(){
-        fetch("http://www.omdbapi.com/?i=tt3896198&apikey=4c870ec6&s=avatar")
+        fetch("https://www.omdbapi.com/?i=tt3896198&apikey=4c870ec6&s=batman")
            .then(response => response.json())
            .then(data => this.setState({movies: data.Search}))
     }
     
+    searchMovies = (text, type = "all")=>{
+      fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=4c870ec6&s=${text}${
+          type !== "all" ? `&type=${type}` : ""
+      }`
+      )
+        .then(response => response.json())
+        .then(data => this.setState({movies: data.Search}))
+
+    }
     render() { 
         return <div className="container">
+            <SearchBar searchMovies={this.searchMovies} />
             <Movies movies={this.state.movies} />
         </div>;
     }
